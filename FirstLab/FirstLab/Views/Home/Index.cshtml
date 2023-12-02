@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <h4> @ViewBag.CafeName </h4>
+    <div>
+        <h3> Menu </h3>
+        @Html.ActionLink("Drinks", "DrinkForm")
+    </div>
+    <form method="get" action="/Bar/GetDrink">
+        <input type="text" name="name" />
+        <input type="checkbox" name="ice" />
+        <input type="submit" value="Ok" />
+    </form>
+</body>
+</html>
